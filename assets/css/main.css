@@ -1,0 +1,173 @@
+:root {
+  --primary: #2d6cdf;
+  --dark: #0f172a;
+  --card: #ffffff;
+  --muted: #94a3b8;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #0b1120;
+  color: #0f172a;
+}
+
+.site {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-orbs {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(45, 108, 223, 0.35), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(14, 165, 233, 0.25), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(37, 99, 235, 0.25), transparent 40%);
+  z-index: 0;
+}
+
+.site-container {
+  padding: 3rem 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.layout {
+  align-items: stretch;
+}
+
+.profile-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content-card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  min-height: 520px;
+}
+
+.profile-card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 6px solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.profile-card .socials a {
+  color: var(--primary);
+  margin: 0 0.35rem;
+  font-weight: 600;
+}
+
+.nav-menu {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 12px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.nav-menu a.router-link-exact-active {
+  background: #e0ebff;
+  color: var(--primary);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.subtitle-block {
+  color: #475569;
+  line-height: 1.6;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.75rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.info-grid span {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.matrix-box {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: #0b1120;
+  color: #e2e8f0;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.matrix-box .matrix-content {
+  position: relative;
+  z-index: 2;
+}
+
+.matrix-box canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-box {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+@media (max-width: 1024px) {
+  .site-container {
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .content-card {
+    padding: 1.5rem;
+  }
+}
