@@ -1,0 +1,1 @@
+{"name":"asmdev.tec.br","private":true,"type":"module","scripts":{"dev":"nuxt dev","build":"nuxt build","preview":"nuxt preview","lint":"npx eslint ."},"dependencies":{"nuxt":"^3.12.0"}}
